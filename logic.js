@@ -90,7 +90,7 @@ calcbtn.addEventListener("click",()=>{
 
         if (mobileView.matches) {
             // For mobile screens
-            document.querySelector(".calc").style.height="170vmin";
+            document.querySelector(".calc").style.height="190vmin";
             document.querySelector(".calc").style.width="100vmin";
             document.querySelector(".btn-container").style.marginLeft="0vmin";
             btns.forEach(btn=>{
