@@ -1,0 +1,166 @@
+body{
+    transition: 0.5s;
+}
+.calc{
+    background-color: BLACK;
+    border-radius: 2rem;
+    height: 97.5vmin;
+    width: 65vmin;
+    margin-left: 65vmin;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+ 
+}
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 5vmin;
+    
+}
+.disp{
+    color: white;
+   transition: 0.5s;
+    width: 60vmin;
+    height: 15vmin;
+    margin-top: 5vmin;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13vmin;
+    font-weight:500;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.btn{
+       background-color: #1C1C1C;
+       color: white;
+       font-size: 4.8vmin;
+       font-weight: bolder;
+       border-radius: 5vmin;
+       height:10vmin;
+       width: 10vmin;
+       margin-top: 25vmin;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 1vmin;
+       
+}
+#calfunc{
+    background-color:  #FF9500;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
+/* Responsive styling specifically for Samsung Galaxy F13 and similar mobile devices */
+@media (max-width: 1080px){
+    
+    .calc{
+        background-color: BLACK;
+        border-radius: 2rem;
+        height: 170vmin;
+        width: 100vmin;
+        margin-left: -2vmin;
+        margin-top: -2vmin;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     
+    }
+
+    .btn{
+        background-color: #1C1C1C;
+        color: white;
+        font-size: 6vmin;
+        font-weight: bolder;
+        border-radius: 10vmin;
+        height:15vmin;
+        width:18vmin;
+        margin-top: 25vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1vmin;
+ }
+
+ .disp{
+    color: white;
+    width: 86vmin;
+    height: 25vmin;
+    margin-top: 5vmin;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16vmin !important;
+    font-weight:600;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.ver{
+    font-size: large;
+    background-color: bisque;
+    color: black;
+    border: 4px solid grey;
+    border-radius: 4vmin;
+    font-weight: bolder;
+    margin-left: 20vmin;
+    margin-top: -5vmin !important; 
+    height: 70vmin !important;
+    width: 60vmin !important;
+    z-index: 1;
+}
+.fa-circle{
+    margin-left: -83vmin !important;
+    margin-top: 5vmin; 
+}
+.btn.sci-btn { /* Specific adjustments for scientific buttons */
+    font-size: 6vmin;
+    height: 12vmin;
+    width: 12vmin;
+}
+
+}
+
+
+.ver{
+    font-size: large;
+    background-color: bisque;
+    color: black;
+    border: 4px solid grey;
+    border-radius: 4vmin;
+    font-weight: bolder;
+    margin-left: 20vmin;
+    margin-top: -55vmin;
+    height: 40vmin;
+    width: 35vmin;
+    z-index: 1;
+}
+.hide{
+    transition: 0.5s;
+     display: none;
+}
+.btnhide{
+    transition: 0.5s;
+    display: none;
+}
+.fa-calculator{
+    transition: 0.5s;
+margin-left: 0vmin;
+}
+.fa-circle{
+   color: white;
+   margin-left: -55vmin;
+   cursor: pointer;
+   transition: 0.5s;
+}
