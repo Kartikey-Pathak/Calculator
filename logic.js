@@ -47,12 +47,16 @@ calcbtn.addEventListener("click",()=>{
         document.querySelector(".calc").style.width="70vmin";
         document.querySelector(".btn-container").style.marginTop="1vmin";
         document.querySelector(".btn-container").style.marginLeft="0vmin";
+        document.querySelector(".fa-linkedin").style.marginTop="90vmin";
+        document.querySelector(".fa-linkedin").style.marginLeft="1vmin";
         
         if (mobileView.matches) {
             // For mobile screens
-            document.querySelector(".calc").style.height="220vmin";
+            document.querySelector(".calc").style.height="180vmin";
             document.querySelector(".calc").style.width="100vmin";
             document.querySelector(".btn-container").style.marginLeft="0vmin";
+            
+
             btns.forEach(btn=>{
                 btn.style.height="13vmin";
                 btn.style.width="18vmin";
@@ -87,10 +91,12 @@ calcbtn.addEventListener("click",()=>{
         document.querySelector(".calc").style.width="65vmin";
         document.querySelector(".btn-container").style.marginTop="5vmin";
         document.querySelector(".btn-container").style.marginLeft="0vmin";
+        document.querySelector(".fa-linkedin").style.marginTop="3vmin";
+        document.querySelector(".fa-linkedin").style.marginLeft="-15vmin";
 
         if (mobileView.matches) {
             // For mobile screens
-            document.querySelector(".calc").style.height="220vmin";
+            document.querySelector(".calc").style.height="170vmin";
             document.querySelector(".calc").style.width="100vmin";
             document.querySelector(".btn-container").style.marginLeft="0vmin";
             btns.forEach(btn=>{
@@ -125,7 +131,9 @@ modebtn.addEventListener("click",()=>{
       display.style.color="black";
 
       document.querySelector("body").style.backgroundColor="black";
-      // Loop through all buttons and change their styles
+      document.querySelector(".fa-linkedin").style.color="black";
+      document.querySelector(".fa-github").style.color="black";
+
        modetoggle=true;
     }else{
          modebtn.style.color="white";
@@ -133,8 +141,9 @@ modebtn.addEventListener("click",()=>{
     display.style.color="white";
       
       document.querySelector("body").style.backgroundColor="white";
-             // Loop through all buttons and change their styles
-                    
+      document.querySelector(".fa-linkedin").style.color="white";
+      document.querySelector(".fa-github").style.color="white"; 
+      
             modetoggle=false;
          }
     })
@@ -176,8 +185,13 @@ btns.forEach(btn => {
             string=wrd;
         }
         else{
-           display.innerHTML=display.innerHTML+wrd;
-           string=string+wrd;
+           // Check if wrd is not "sin" or "cos And Other Sci-fi btns...so It would not show in display "
+         if (wrd !== "sin" && wrd !== "cos"&& wrd !== "tan"&& wrd !=="log"&& wrd !=="x²"&& wrd !=="x⁴"&& wrd !=="Inverse"&& wrd !=="sin⁻¹"&& wrd !=="cos⁻¹"&& wrd !=="tan⁻¹") {
+           display.innerHTML = display.innerHTML + wrd;
+           string = string + wrd;
+        }else if(wrd==="Inverse"){
+            display.innerHTML="0";
+        }
         }
 
         //check for the length of the numbers
@@ -200,4 +214,93 @@ const disable=()=>{
 
 function setfunc(size){
     display.style.setProperty('font-size', size, 'important');
+}
+
+//Sci-btns functionality...
+
+
+function sin(){
+    const inputValue = parseFloat(display.innerHTML); // Convert to a number
+    if (inverse) {
+        // Calculate inverse sine (sin⁻¹) in degrees, check if input is within range [-1, 1]
+        if (inputValue >= -1 && inputValue <= 1) {
+            string = Math.asin(inputValue) * (180 / Math.PI);
+            display.innerHTML = string.toFixed(4);
+        } else {
+            display.innerHTML = "Invalid";
+        }
+    } else {
+        // Calculate sine with input in degrees
+        string = Math.sin(inputValue * (Math.PI / 180));
+        display.innerHTML = string.toFixed(4);
+    }
+}
+
+function cos(){
+    const inputValue=parseFloat(display.innerHTML);
+    if(inverse){
+         // Calculate inverse sine (cos⁻¹) in degrees, check if input is within range [-1, 1]
+        if(inputValue>=-1&&inputValue<=1){
+        string=Math.acos(inputValue) * (180/Math.PI);         //display.innerHTML * (180 / Math.PI);
+        display.innerHTML=string;
+         }
+         else{
+           display.innerHTML="Invalid";
+         }
+    }
+     else{
+          string=Math.cos(inputValue) * (Math.PI /180);        
+        display.innerHTML=string;
+      }
+        display.innerHTML=string.toFixed(4);
+}
+
+function tan(){
+    const inputValue=parseFloat(display.innerHTML);
+    if(inverse){
+        string=Math.atan(inputValue) * (180/Math.PI);         //display.innerHTML * (180 / Math.PI);
+        display.innerHTML=string;
+      }else{
+          string=Math.tan(inputValue) * (Math.PI /180);        
+        display.innerHTML=string;
+      }
+        display.innerHTML=string.toFixed(4);
+    
+}
+
+function sqrt(){
+    string=Math.sqrt(display.innerHTML);     
+    display.innerHTML=string.toFixed(4);
+}
+
+function log(){
+    string=Math.log10(display.innerHTML);     
+    display.innerHTML=string.toFixed(4);
+}
+
+function pow(){
+    string=Math.pow(display.innerHTML,2);     
+    display.innerHTML=string;
+}
+function pow4(){
+    string=Math.pow(display.innerHTML,4);     
+    display.innerHTML=string;
+}
+
+let inv=document.querySelector("#inverse");
+
+let inverse=false;
+
+function invs(){
+    if(inverse===false){
+    document.querySelector("#sin").innerHTML = "sin⁻¹";
+    document.querySelector("#cos").innerHTML = "cos⁻¹";
+    document.querySelector("#tan").innerHTML = "tan⁻¹";
+    inverse=true;
+}   else{
+    document.querySelector("#sin").innerHTML = "sin";
+    document.querySelector("#cos").innerHTML = "cos";
+    document.querySelector("#tan").innerHTML = "tan";
+    inverse=false;
+}
 }
