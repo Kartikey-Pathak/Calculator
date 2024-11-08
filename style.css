@@ -67,8 +67,8 @@ body{
         background-color: BLACK;
         border-radius: 0rem;
         height: 190vmin;
-        width: 100vmin;
-        margin-left: -2vmin;
+        width: 110vmin;
+        margin-left: -6vmin;
         margin-top: -2vmin;
         display: flex;
         flex-wrap: wrap;
@@ -76,6 +76,9 @@ body{
         justify-content: center;
         align-items: center;
      
+    }
+    body{
+        background-color: black;
     }
 
     .btn{
