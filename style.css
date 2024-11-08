@@ -134,13 +134,20 @@ body{
 }
 .fa-linkedin{
     font-size: 7vmin !important;
-    margin-left: 4vmin  !important;
-    margin-top: 40vmin ;
+    margin-left: 0vmin  !important;
+    margin-top: 0vmin !important;
 }
 .fa-github{
     font-size: 7vmin !important;
-    margin-left: -4vmin ;
-    margin-top: -30vmin !important;
+    margin-left: 0vmin !important;
+    margin-top: 0vmin !important;
+}
+.icon{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10vmin;
+    margin-top: 20vmin;
 }
 }
 
