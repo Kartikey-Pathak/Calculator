@@ -65,8 +65,8 @@ body{
     
     .calc{
         background-color: BLACK;
-        border-radius: 2rem;
-        height: 170vmin;
+        border-radius: 0rem;
+        height: 190vmin;
         width: 100vmin;
         margin-left: -2vmin;
         margin-top: -2vmin;
