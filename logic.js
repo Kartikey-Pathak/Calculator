@@ -52,11 +52,12 @@ calcbtn.addEventListener("click",()=>{
         
         if (mobileView.matches) {
             // For mobile screens
-            document.querySelector(".calc").style.height="180vmin";
-            document.querySelector(".calc").style.width="100vmin";
+            document.querySelector(".calc").style.height="190vmin";
+            document.querySelector(".calc").style.width="110vmin";
             document.querySelector(".btn-container").style.marginLeft="0vmin";
-            
-
+            document.querySelector(".fa-linkedin").style.marginTop="145vmin";
+            document.querySelector(".fa-linkedin").style.marginLeft="-10vmin";
+            document.querySelector(".icon").style.marginTop="20vmin";
             btns.forEach(btn=>{
                 btn.style.height="13vmin";
                 btn.style.width="18vmin";
@@ -93,15 +94,17 @@ calcbtn.addEventListener("click",()=>{
         document.querySelector(".btn-container").style.marginLeft="0vmin";
         document.querySelector(".fa-linkedin").style.marginTop="3vmin";
         document.querySelector(".fa-linkedin").style.marginLeft="-15vmin";
+        
 
         if (mobileView.matches) {
             // For mobile screens
-            document.querySelector(".calc").style.height="170vmin";
-            document.querySelector(".calc").style.width="100vmin";
+            document.querySelector(".calc").style.height="190vmin";
+            document.querySelector(".calc").style.width="110vmin";
             document.querySelector(".btn-container").style.marginLeft="0vmin";
+
             btns.forEach(btn=>{
-                btn.style.height="15vmin";
-                btn.style.width="18vmin";
+                btn.style.height="17vmin";
+                btn.style.width="20vmin";
             })
         } else {
             // For larger screens
@@ -186,7 +189,7 @@ btns.forEach(btn => {
         }
         else{
            // Check if wrd is not "sin" or "cos And Other Sci-fi btns...so It would not show in display "
-         if (wrd !== "sin" && wrd !== "cos"&& wrd !== "tan"&& wrd !=="log"&& wrd !=="x²"&& wrd !=="x⁴"&& wrd !=="Inverse"&& wrd !=="sin⁻¹"&& wrd !=="cos⁻¹"&& wrd !=="tan⁻¹") {
+         if (wrd !== "sin" && wrd !== "cos"&& wrd !== "tan"&& wrd !=="log"&& wrd !=="x²"&& wrd !=="x⁴"&& wrd !=="Inverse"&& wrd !=="sin⁻¹"&& wrd !=="cos⁻¹"&& wrd !=="tan⁻¹"&& wrd !=="e") {
            display.innerHTML = display.innerHTML + wrd;
            string = string + wrd;
         }else if(wrd==="Inverse"){
@@ -285,6 +288,13 @@ function pow(){
 function pow4(){
     string=Math.pow(display.innerHTML,4);     
     display.innerHTML=string;
+}
+function e(){
+    string =Math.exp(display.innerHTML);
+    if(string.length===8){
+        setfunc("7vmin");
+    }
+    display.innerHTML=string.toFixed(3);
 }
 
 let inv=document.querySelector("#inverse");
