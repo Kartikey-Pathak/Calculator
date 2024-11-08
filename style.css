@@ -66,7 +66,7 @@ body{
     .calc{
         background-color: BLACK;
         border-radius: 2rem;
-        height: 190vmin;
+        height: 170vmin;
         width: 100vmin;
         margin-left: -2vmin;
         margin-top: -2vmin;
@@ -129,8 +129,18 @@ body{
     height: 12vmin;
     width: 12vmin;
 }
-
+.fa-linkedin{
+    font-size: 7vmin !important;
+    margin-left: 4vmin  !important;
+    margin-top: 40vmin ;
 }
+.fa-github{
+    font-size: 7vmin !important;
+    margin-left: -4vmin ;
+    margin-top: -30vmin !important;
+}
+}
+
 
 
 .ver{
@@ -163,4 +173,27 @@ margin-left: 0vmin;
    margin-left: -55vmin;
    cursor: pointer;
    transition: 0.5s;
+}
+.fa-linkedin{
+    color: white;
+    margin-left: -15vmin;
+    margin-top: 3vmin;
+    font-size: 4vmin;
+}
+.fa-linkedin:hover{
+    color: lightskyblue;
+    transition: 0.5s;
+}
+.fa-github{
+    margin-top: 90vmin;
+    color: white;
+    font-size: 4vmin;
+    margin-left: -20vmin;
+}
+.fa-github:hover{
+    transition: 0.5s;
+    color: lightskyblue;
+}
+#inverse{
+    font-size: medium;
 }
