@@ -47,8 +47,8 @@ calcbtn.addEventListener("click",()=>{
         document.querySelector(".calc").style.width="70vmin";
         document.querySelector(".btn-container").style.marginTop="1vmin";
         document.querySelector(".btn-container").style.marginLeft="0vmin";
-        document.querySelector(".fa-linkedin").style.marginTop="90vmin";
-        document.querySelector(".fa-linkedin").style.marginLeft="1vmin";
+        document.querySelector(".fa-linkedin").style.marginTop="180vmin";
+        document.querySelector(".fa-linkedin").style.marginLeft="-3vmin";
         
         if (mobileView.matches) {
             // For mobile screens
@@ -151,6 +151,7 @@ modebtn.addEventListener("click",()=>{
          }
     })
 
+     //The main functionality....
 
 btns.forEach(btn => {
     btn.addEventListener("click",()=>{
@@ -192,7 +193,7 @@ btns.forEach(btn => {
          if (wrd !== "sin" && wrd !== "cos"&& wrd !== "tan"&& wrd !=="log"&& wrd !=="x²"&& wrd !=="x⁴"&& wrd !=="Inverse"&& wrd !=="sin⁻¹"&& wrd !=="cos⁻¹"&& wrd !=="tan⁻¹"&& wrd !=="e") {
            display.innerHTML = display.innerHTML + wrd;
            string = string + wrd;
-        }else if(wrd==="Inverse"){
+        }if(wrd==="Inverse"){
             display.innerHTML="0";
         }
         }
