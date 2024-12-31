@@ -1,7 +1,7 @@
 {
     "name": "My Web App",
     "short_name": "IOSApp",
-    "start_url": "/index.html",
+    "start_url": "/Calculator/index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#007bff",
