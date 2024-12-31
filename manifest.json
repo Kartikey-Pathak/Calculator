@@ -7,12 +7,12 @@
     "theme_color": "#007bff",
     "icons": [
       {
-        "src": "the-icon.png",
+        "src": "ios-icon.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "the-icon.png",
+        "src": "ios-icon.png",
         "sizes": "512x512",
         "type": "image/png"
       }
